@@ -46,7 +46,7 @@ c3, c4, c5 = st.columns([1, 6, 1])
 with c4:
     with st.form("Form"):
         valuetxt = query_params["text"][0] if "text" in query_params else ""
-        URLBox = st.text_area("👇 Paste text below to get started!", autocomplete="text",
+        URLBox = st.text_area("👇 Paste text below to get started!",
                               placeholder="Ex. Elon Musk is the CEO of Tesla", help="Don't put more than 1000 words", value=valuetxt)
         cap = 1000
 
