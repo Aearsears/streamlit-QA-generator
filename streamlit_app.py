@@ -80,7 +80,6 @@ try:
     st.json(faqs)
     url = 'https://cardify-ai.herokuapp.com/qa'
     x = requests.post(url, json=json.dumps(faqs))
-    st.title(x.status_code)
     components.html(f'<div id="statuscode">{x.status_code}</div>')
 
 except Exception as e:
