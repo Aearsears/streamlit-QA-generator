@@ -1,4 +1,5 @@
 import streamlit as st
+import streamlit.components.v1 as components
 import pandas as pd
 from annotated_text import annotated_text
 
@@ -80,6 +81,7 @@ try:
     url = 'https://cardify-ai.herokuapp.com/qa'
     x = requests.post(url, json=json.dumps(faqs))
     st.title(x.status_code)
+    components.html(f'<div id="statuscode">{x.status_code}</div>')
 
 except Exception as e:
     st.warning(
