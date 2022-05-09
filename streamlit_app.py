@@ -61,7 +61,7 @@ with c4:
         st.stop()
 
     if submitted and not URLBox:
-        st.warning("☝️ Please some text.")
+        st.warning("☝️ Please add some text.")
         st.stop()
 
 text2 = (URLBox[:cap] + ".") if len(URLBox) > cap else URLBox
@@ -81,12 +81,11 @@ try:
     url = 'https://cardify-ai.herokuapp.com/qa'
     x = requests.post(url, json=json.dumps(faqs))
     st.title("Status Code")
-    components.html(f'<div id="statuscode">{x.status_code}</div>')
 
 except Exception as e:
     st.warning(
         f"""
-    🔮 **Snap!** Seems like there's an issue with that URL, please try another one. 
+    🔮 **Snap!** Seems like there's an issue with that block of text, please try another one. 
     """
     )
     st.stop()
