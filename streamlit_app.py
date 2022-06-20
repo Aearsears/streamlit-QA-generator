@@ -78,7 +78,7 @@ try:
     nlp = pipeline("multitask-qa-qg")
     faqs = nlp(text2)
     st.json(faqs)
-    url = 'https://cardify-backend.herokuapp.com/qareceive'
+    url = 'https://cardify-backend.herokuapp.com/cards/qareceive'
     x = requests.post(url, json=json.dumps(faqs))
     st.title("Status Code")
 
