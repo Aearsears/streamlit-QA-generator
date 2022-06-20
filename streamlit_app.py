@@ -79,6 +79,7 @@ try:
     faqs = nlp(text2)
     st.json(faqs)
     url = 'https://cardify-backend.herokuapp.com/cards/qareceive'
+    print(json.dumps(faqs))
     x = requests.post(url, json=json.dumps(faqs))
     st.title("Status Code")
 
